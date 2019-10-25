@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="load.css">
+</head>
+<body>
+	<div id="loading-wrapper">
+		<div id="loading-text">CHARGEMENT</div>
+		<div id="loading-content"></div>
+		<div id="loading-message"></div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+	// Différents textes à afficher au chargement
+	var monTab = ['Chargement de Digital Campus', 'Generation des mesh', 'Optimisation des polygones', 'Recuperation des informations du serveur', 'Rendu 3D de la scene', 'Compilation des modules WebGL', 'Connexion a la base de donnees', 'Initialisation du framework Materialize.js', 'Extraction des dll du moteur', 'Génération des Lightmaps', 'Initialisation du bot', 'Enclenchement du réseau neuronal 1', 'Enclenchement du réseau neuronal 2', 'Chargement du modèle de reconnaissance vocal', 'Application des templates générés', 'Interprétation du SCSS', 'Exploitation des cookies', 'Réservation de l\'espace mémoire en cache', 'Nettoyage des logs', 'Lancement de l\'application', 'Lancement de l\'application'];
+
+	// On récupère le message de chargement
+	var maDiv = document.getElementById("loading-message");
+	var index = 0;
+	// Fonction de changement du message de chargement
+	function chargement(){
+		// Si on est toujours dans le tableau monTab
+		if (index < monTab.length) {
+			// On incrémente notre index pour afficher notre chargement correctement
+			maDiv.innerHTML = monTab[index];
+			index += 1;
+		}
+		// Delai de transition aléatoire entre les différentes animations
+		setTimeout(function test() {
+			// Si le chargement est terminée on lance une animation de translation vers le haut
+			if (index >= monTab.length - 1 && parent.started) {
+				parent.document.getElementById("loading").style.transform = "translate3d(0, -100vh, 0)";
+				setTimeout(function disappear() {
+					parent.document.getElementById("loading").style.display = "none";
+				}, 1500);
+			}
+			else {
+				chargement();
+			}
+		}, Math.floor(Math.random() * 1000) + 10);
+	}
+	// On cache notre écran de chargement une fois celui ci terminé
+	chargement();
+	parent.document.getElementById("hide_all").style.display = "none";
+	
+</script>

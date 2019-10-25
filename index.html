@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DIGITAL CAMPUS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+	<link type="text/css" rel="stylesheet" href="digital.css"/>
+	<script type="text/javascript" src='keyword.js' charset="utf-8"></script>
+	<script src="Build/UnityLoader.js"></script>
+	<link rel="stylesheet" type="text/css" href="popup.css">
+	<script src="https://cdn.pannellum.org/2.4/pannellum.js"></script>
+	<link rel="stylesheet" href="https://cdn.pannellum.org/2.4/pannellum.css">
+</head>
+<body>	
+	<script>
+		var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL.json");
+	</script>
+	
+	<iframe src="load.html" id="loading"></iframe>
+	<div id="hide_all" style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; background-color: #2d2d2d; z-index: 30; pointer-events: none;"></div>
+
+
+	<!-- POPUP SYLVAIN -->
+
+	<input type="checkbox" id="popup__1" class="popup__check" />
+		<div class="popup__base">
+			<label for="popup__1" class="popup__bg"></label>
+			<div class="popup__inner">
+				<div class="popup__calign">
+					<label for="popup__1" class="popup__close">+</label>
+					<!-- Creation de la div contenant la vue 360° -->
+					<div id="panorama1"></div>
+					<div id="panorama2"></div>
+					<div id="panorama3"></div>
+					<div id="panorama4"></div>
+					<div id="panorama5"></div>
+					<div id="panorama6"></div>
+					<div id="panorama7"></div>
+					<div id="panorama8"></div>
+					<div id="panorama9"></div>
+					<div id="panorama10"></div>
+					<!-- Creation de la div contenant les QR codes -->
+					<div id="QR1"></div>
+					<div id="QR2"></div>
+					<div id="QR3"></div>
+					<div id="QR4"></div>
+					<div id="QR5"></div>
+					<div id="QR6"></div>
+					<div id="QR7"></div>
+					<div id="QR8"></div>
+					<div id="QR9"></div>
+					<div id="QR10"></div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="popup.js"></script>
+
+	<!-- FIN POPUP-->
+
+	<script type="text/javascript" src="script.js"></script>
+
+	<div class="row" style="position: fixed;">
+		<div class="col m4">
+			<a href="#" id="button_menue" data-activates="slide-out" class="button-collapse col m2"><i class="material-icons" style="font-size: 40px; margin-top: 2vh;">menu</i></a>
+		</div>
+	</div>
+	<ul id="slide-out" class="side-nav">
+		<div class="user-view" style="margin-top: -3vh">
+			<p style="line-height:3.5vh; font-size: 3vh;"> <span style="color: #039be5; font-size: 4vh;">H</span>umanisme <span style="color: #039be5; font-size: 3vh;">E</span>ntreprenariat <span style="color: #039be5; font-size: 4vh;">P</span>rofessionnalisme</p>
+		</div>
+		<div style="border-bottom: 1.5px solid #039be5; width: 100%; height: 0.1%; margin-bottom: 4vh;"></div>
+		<div>
+			<div style="padding-bottom: 0.5vh;font-size: 20px;">
+				<a href="index.html">Accueil</a>
+			</div>
+			<div style="padding-bottom: 0.5vh;font-size: 20px;">
+				<a href="presentation_camp.html">Le Campus</a>
+			</div>
+			<div style="padding-bottom: 0.5vh;font-size: 20px;">
+				<a href="presentation_ecole.html">Les Ecoles</a><img src="img/triangle.png" id="ecole" style="height: 3vh; position: absolute; margin-top: 0.4vh; margin-left: 0.5vw; cursor: pointer;">
+			</div>
+			<div id="liste" style="display: none; transition-duration: 1s;">
+				<div><div class="ligne"></div><a href="http://www.ecole3a.edu/" target="_blank" style="margin-left: 4vw">3A</a></div>
+				<div><div class="ligne"></div><a href="http://www.epsi.fr/" target="_blank" style="margin-left: 4vw">EPSI</a></div>
+				<div><div class="ligne"></div><a href="http://www.icl.fr/" target="_blank" style="margin-left: 4vw">ICL</a></div>
+				<div><div class="ligne"></div><a href="http://www.ecoles-idrac.com/" target="_blank" style="margin-left: 4vw">IDRAC</a></div>
+				<div><div class="ligne"></div><a href="http://www.ieftourisme.com/" target="_blank" style="margin-left: 4vw">IEFT</a></div>
+				<div><div class="ligne"></div><a href="http://www.iet.fr/" target="_blank" style="margin-left: 4vw">IET</a></div>
+				<div><div class="ligne"></div><a href="http://www.ifag.com/" target="_blank" style="margin-left: 4vw">IFAG</a></div>
+				<div><div class="ligne"></div><a href="http://www.igefi.net/" target="_blank" style="margin-left: 4vw">IGFI</a></div>
+				<div><div class="ligne"></div><a href="http://www.ihedrea.org/" target="_blank" style="margin-left: 4vw">IHEDREA</a></div>
+				<div><div class="ligne"></div><a href="http://www.ileri.fr/" target="_blank" style="margin-left: 4vw">ILERI</a></div>
+				<div><div class="ligne"></div><a href="http://www.opensourceschool.fr/" target="_blank" style="margin-left: 4vw">OPEN SOURCE SCHOOL</a></div>
+				<div><div class="ligne"></div><a href="http://www.ecoles-supdecom.com/" target="_blank" style="margin-left: 4vw">SUP DE COM</a></div>
+			</div>
+		</div>
+	</ul>
+
+	<div style="width: 100vw">
+		<div type='text' autocomplete="off" id='input1'></div>
+		<div id="tour_micro" onclick="recognition.start()"><div id="micro"></div></div>
+		<div id="ph_shearch" onclick="Submit()"></div>
+		<!-- <input type="text" name="research" id="research"> -->
+		<input type='text' id="input" autocomplete="off" onkeyup="Keyword.Search(this.value)">
+		<div id="result"></div>	
+	</div>
+
+	<div id="thomas"><div id="gameContainer" style="width: 960px; height: 600px; margin: auto; z-index: 1; pointer-events: all;"></div></div>
+
+	<script src="jquery/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	<script src="digital.js"></script>
+
+</body>
+
+<script type="text/javascript">
+	var ev = '';
+	document.getElementById('input').addEventListener('keydown',function(e){
+		var res = document.getElementById("result");
+		var inp = document.getElementById("input");
+		ev = e.keyCode;
+		if(ev==38){
+			e.preventDefault();
+		}
+		if(ev == 13 ) {    
+		var results = document.getElementById('result');
+		res.innerHTML = '';
+    	var divs = results.getElementsByTagName('div');
+    	Keyword.Alexis(true);
+    	selectedResult = -1;
+        Submit(Keyword.Find(document.getElementById('input').value));
+    	}
+		if(ev==8){
+			console.log(inp.value.lastIndexOf(" "));
+			if(inp.value.lastIndexOf(" ") == inp.value.length-2 || inp.value.lastIndexOf(" ") == -1){
+				document.getElementById("input1").innerHTML = "";
+				res.innerHTML = '';
+				res.style.display = 'none';
+				Keyword.Alexis(true);
+				Keyword.Find(document.getElementById('input').value);
+			}
+		}
+	});
+</script>
+</html>

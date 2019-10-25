@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Panorama 5 mobile</title>
+	<script src="https://cdn.pannellum.org/2.4/pannellum.js"></script>
+	<link rel="stylesheet" href="https://cdn.pannellum.org/2.4/pannellum.css">
+</head>
+<body>
+	<div id="panorama5" style="width: 100vw; height: 100vh; position: absolute; top: 0; left: 0;"></div>
+</body>
+</html>
+
+<script type="text/javascript">
+	pannellum.viewer('panorama5', {
+		"type": "equirectangular",
+		"panorama": "E11.jpg",
+		"autoLoad": true,
+		"showControls": false,
+		"compass": false,
+		"orientationOnByDefault": true,
+});
+</script>

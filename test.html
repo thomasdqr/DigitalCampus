@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="thomas_veux_une_feuille_de_style.css">
+    <script type="text/javascript" src='keyword.js' charset="utf-8"></script>
+</head>
+<body>
+
+<input type='text' id="input" autocomplete="off" onkeyup="Keyword.Search(this.value)"> <!-- premier -->
+<input type='text' autocomplete="off" id='input1'> <!-- deuxième -->
+<div id="result"></div>
+<br><br>
+<button onclick="Keyword.Find(document.getElementById('input').value)">Test</button>
+<button onclick="recognition.start()" id='button'>Rec</button>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+var ev = '';
+document.getElementById('input').addEventListener('keydown',function(e){
+	ev = e.keyCode;
+	if(ev==38){
+		e.preventDefault();
+	}
+    if(ev==8){
+        var res = document.getElementById("result");
+        var inp = document.getElementById("input");
+        console.log(inp.value.lastIndexOf(" "));
+        if(inp.value.lastIndexOf(" ") ==  inp.value.length-2){
+            res.innerHTML = '';
+            res.style.display = 'none';
+        }
+    }
+});
+</script>
